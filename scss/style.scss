@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla',sans-serif;
+}
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+$Blue: #4abebd;
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $Light-Gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 660px;
+}
+
+.card-top-part{
+    padding: 6%;
+    h2{
+        color:$Cyan;
+        margin-bottom: 1rem;
+    }
+    p:nth-of-type(1){
+        color:$Bright-Yellow;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    p:nth-of-type(2){
+        color: $Grayish-Blue;
+        line-height: 1.5rem;
+    }
+}
+
+.card-bottom-part{
+    display: flex;
+    .card-bottom-left{
+        padding: 6%;
+        width: 50%;
+        border-radius: 0 0 0 5px;
+        background-color: $Cyan;
+        h3{
+            color:#fff;
+            margin-bottom: .8rem;
+        }
+        .price-div{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: .5rem;
+            span{
+                font-size: 2.2rem;
+                color:#fff;
+                margin-right: 1rem;
+                font-weight: bold;
+            }
+            p{
+                color:$Blue;
+            }
+        }
+        p{
+            color:#fff;
+        }
+        button{
+            margin-top: 1.5rem;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            outline:none;
+            background: $Bright-Yellow;
+            font-weight: bold;
+            color:#fff;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+    .card-bottom-right{
+        padding: 6%;
+        width: 50%;
+        background:$Blue;
+        border-radius: 0 0 5px 0;
+        h3{
+            color:#fff;
+            margin-bottom: 1rem;
+        }
+        p{
+            color:#fff;
+            width: 220px;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width:820px) {
+    .card{
+        max-width: 90%;
+        margin: 20px auto;
+        .card-top-part{
+            padding: 6%;
+            padding-bottom: 10%;
+        }
+        
+        .card-bottom-part{
+            flex-direction: column;
+            .card-bottom-left{
+                width: 100%;
+                border-radius: 0;
+                padding: 6%;
+            }
+            .card-bottom-right{
+                width: 100%;
+                border-radius: 0 0 5px 5px;
+                padding: 6%;
+            }
+        }
+    }
+}
